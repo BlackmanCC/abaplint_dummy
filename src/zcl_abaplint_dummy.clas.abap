@@ -9,7 +9,7 @@ CLASS zcl_abaplint_dummy DEFINITION
       IMPORTING
         !im_snad       TYPE any
       RETURNING
-        VALUE(re_snad) TYPE zeide_nad
+        VALUE(re_snad) TYPE zeide_abaplintdummy
       RAISING
         zcx_isu_dex_all .
 
@@ -17,7 +17,7 @@ CLASS zcl_abaplint_dummy DEFINITION
       IMPORTING
         !im_snad       TYPE any
       RETURNING
-        VALUE(re_snad) TYPE zeide_name
+        VALUE(re_snad) TYPE zeide_abaplintdum
       RAISING
         zcx_isu_dex_all .
 
@@ -28,12 +28,8 @@ ENDCLASS.
 
 
 
-CLASS zcl_abaplint_dummy IMPLEMENTATION.
+CLASS ZCL_ABAPLINT_DUMMY IMPLEMENTATION.
 
-
-  METHOD read_nad_name_in.
-
-  ENDMETHOD.
 
   METHOD read_nad_in.
 
@@ -41,4 +37,8 @@ CLASS zcl_abaplint_dummy IMPLEMENTATION.
 
   ENDMETHOD.
 
+
+  METHOD read_nad_name_in.
+
+  ENDMETHOD.
 ENDCLASS.
