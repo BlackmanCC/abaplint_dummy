@@ -1,26 +1,16 @@
-"! <p class="shorttext synchronized" lang="de">Allgemeine Richtlinien Version 6.0</p>
 CLASS zcl_abaplint_dummy DEFINITION
   PUBLIC
   CREATE PUBLIC .
 
   PUBLIC SECTION.
 
-    METHODS read_nad_in
-      IMPORTING
-        !im_snad       TYPE any
+    METHODS read_structure
       RETURNING
-        VALUE(re_snad) TYPE zeide_abaplintdummy
-      RAISING
-        zcx_isu_dex_all .
+        VALUE(rs_structure) TYPE zabaplint_structure.
 
-    METHODS read_nad_name_in
-      IMPORTING
-        !im_snad       TYPE any
+    METHODS read_substructure
       RETURNING
-        VALUE(re_snad) TYPE zeide_abaplintdum
-      RAISING
-        zcx_isu_dex_all .
-
+        VALUE(rs_substructure) TYPE zabaplint_substructure.
   PROTECTED SECTION.
 
   PRIVATE SECTION.
@@ -28,17 +18,17 @@ ENDCLASS.
 
 
 
-CLASS ZCL_ABAPLINT_DUMMY IMPLEMENTATION.
+CLASS zcl_abaplint_dummy IMPLEMENTATION.
 
 
-  METHOD read_nad_in.
+  METHOD read_structure.
 
-    re_snad-name = read_nad_name_in( im_snad ).
+    rs_structure-substruc = read_substructure( ).
 
   ENDMETHOD.
 
 
-  METHOD read_nad_name_in.
+  METHOD read_substructure.
 
   ENDMETHOD.
 ENDCLASS.
